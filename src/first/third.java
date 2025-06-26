@@ -8,99 +8,73 @@ public class third {
 
         // 1. Print first n Fibonacci numbers
         System.out.println("Enter how many Fibonacci numbers you want:");
-        int n = input.nextInt();
-        int a = 0, b = 1;
+        int count = input.nextInt();
+        int first = 0, second = 1;
         System.out.println("Fibonacci Series:");
-        for (int i = 1; i <= n; i++) {
-            System.out.print(a + " ");
-            int sum = a + b;
-            a = b;
-            b = sum;
+        for (int i = 1; i <= count; i++) {
+            System.out.print(first + " ");
+            int next = first + second;
+            
+            first = second;
+            second = next;
         }
-        System.out.println();
 
         // 2. Swap two numbers using third variable
-        System.out.println("Enter two numbers to swap (with 3rd variable):");
-        int x = input.nextInt();
-        int y = input.nextInt();
-        int temp = x;
-        x = y;
-        y = temp;
-        System.out.println("After swap: x = " + x + ", y = " + y);
+        
+        System.out.println("\nEnter two numbers to swap (with 3rd variable):");
+        int num1 = input.nextInt();
+        int num2 = input.nextInt();
+        int temp = num1;
+        num1 = num2;
+        num2 = temp;
+        System.out.println("After swap: num1 = " + num1 + ", num2 = " + num2);
 
         // 3. Swap two numbers without using third variable
         System.out.println("Enter two numbers to swap (without 3rd variable):");
-        int p = input.nextInt();
-        int q = input.nextInt();
-        p = p + q;
-        q = p - q;
-        p = p - q;
-        System.out.println("After swap: p = " + p + ", q = " + q);
+        int a = input.nextInt();
+        int b = input.nextInt();
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("After swap: a = " + a + ", b = " + b);
 
-        // 4. Find largest among three numbers
-        System.out.println("Enter three numbers to find the largest:");
-        int a1 = input.nextInt();
-        int b1 = input.nextInt();
-        int c1 = input.nextInt();
-        if (a1 >= b1 && a1 >= c1)
-            System.out.println(a1 + " is the largest.");
-        else if (b1 >= a1 && b1 >= c1)
-            System.out.println(b1 + " is the largest.");
-        else
-            System.out.println(c1 + " is the largest.");
-
-   
-
-        // 5. Enter marks and calculate total and percentage
+        // 4. Enter marks and calculate total and percentage
         System.out.println("Enter marks of 3 subjects:");
-        int m1 = input.nextInt();
-        int m2 = input.nextInt();
-        int m3 = input.nextInt();
-        int total = m1 + m2 + m3;
-        double percentage = total / 3.0;
-        System.out.println("Total Marks: " + total);
-        System.out.println("Percentage: " + percentage + "%");
+        int marks1 = input.nextInt();
+        int marks2 = input.nextInt();
+        int marks3 = input.nextInt();
+        int totalMarks = marks1 + marks2 + marks3;
+        double percent = totalMarks / 3.0;
+        System.out.println("Total Marks: " + totalMarks);
+        System.out.println("Percentage: " + percent + "%");
 
-
-
-        // 6. Check even or odd
-        System.out.println("Enter a number to check even or odd:");
-        int evenOdd = input.nextInt();
-        if (evenOdd % 2 == 0)
-            System.out.println("Even number.");
-        else
-            System.out.println("Odd number.");
-        
-        //7.  Multiplication Table	Take a number as input and print its multiplication table (1 to 10).
+        // 5. Multiplication Table
         System.out.print("Enter a number to print its multiplication table: ");
-        int number = input.nextInt();
+        int tableNum = input.nextInt();
+        System.out.println("Multiplication Table of " + tableNum + ":");
 
-        // Print multiplication table from 1 to 10
-        System.out.println("Multiplication Table of " + number + ":");
         for (int i = 1; i <= 10; i++) {
-            System.out.println(number + " x " + i + " = " + (number * i));
-            //  8: Find Factorial of a Number
-       
-            System.out.println("----- Factorial Calculator -----");
-            System.out.print("Enter a number: ");
-            int num = input.nextInt(); // Take number from user
-
-            long factorial = 1; // Variable to store result
-
-            // Loop from 1 to the entered number
-            int j = 1;
-            while (i <= num) {
-                factorial = factorial * i; // Multiply each number
-                i = i + 1; // Go to next number
-            }
-
-            // Show the result
-            System.out.println("Factorial of " + num + " is: " + factorial);
-
+            System.out.println(tableNum + " x " + i + " = " + (tableNum * i));
         }
 
-   
-      
+        // 6. Find Factorial of a Number
+        System.out.println("----- Factorial Calculator -----");
+        System.out.print("Enter a number: ");
+        int factInput = input.nextInt();
 
+        long factResult = 1;
+        int factCounter = 1;
+        while (factCounter <= factInput) {
+            factResult = factResult * factCounter;
+            factCounter++;
+        }
+        System.out.println("Factorial of " + factInput + " is: " + factResult);
 
-    }}
+        // 7. Check the length of the String 
+        input.nextLine(); // Clear leftover newline
+        System.out.println("Enter a string:");
+        String text = input.nextLine();
+        int textLength = text.length();
+        System.out.println("The length of the string is: " + textLength);
+    }
+}

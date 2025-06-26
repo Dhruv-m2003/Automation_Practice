@@ -26,6 +26,7 @@ public class second {
             System.out.println("Negative number.");
         else
             System.out.println("Number is zero.");
+        
         // 3. Check even or odd
         System.out.println("\n---- Even or Odd ----");
         System.out.print("Enter a number: ");
@@ -39,40 +40,22 @@ public class second {
 
         // 4. Largest of 3 numbers
         System.out.println("\n---- Largest Number ----");
-        System.out.println("Enter three numbers again to find largest (if-else):");
-        int l1 = input.nextInt();
-        int l2 = input.nextInt();
-        int l3 = input.nextInt();
-        if (l1 > l2) {
-            if (l1 > l3)
-                System.out.println(l1 + " is largest");
-            else
-                System.out.println(l3 + " is largest");
-        } else {
-            if (l2 > l3)
-                System.out.println(l2 + " is largest");
-            else
-                System.out.println(l3 + " is largest");
-        }
+        System.out.println("Enter three numbers again to find largest:");
+        int num1 = input.nextInt();
+        int num2 = input.nextInt();
+        int num3 = input.nextInt();
 
+        	if (num1 >= num2 && num1 >= num3) {
+                System.out.println(num1 + " is the largest");
+            } else if (num2 >= num1 && num2 >= num3) {
+                System.out.println(num2 + " is the largest");
+            } else {
+                System.out.println(num3 + " is the largest");
+            }
 
-        // 5. Swap two numbers
-        System.out.println("\n---- Swap Numbers ----");
-        System.out.print("Enter first number: ");
-        int a = input.nextInt();
+       
 
-        System.out.print("Enter second number: ");
-        int b = input.nextInt();
-
-        System.out.println("Before swap: a = " + a + ", b = " + b);
-
-        int temp = a;
-        a = b;
-        b = temp;
-
-        System.out.println("After swap: a = " + a + ", b = " + b);
-
-        // 6. Vowel or Consonant
+        // 5. Vowel or Consonant
         System.out.println("\n---- Vowel or Consonant ----");
         System.out.println("Enter an alphabet:");
         char ch = input.next().toLowerCase().charAt(0);
@@ -80,12 +63,13 @@ public class second {
             System.out.println("Vowel");
         else
             System.out.println("Consonant");
-        // 7. Compare two strings
+        
+        // 6. Compare two strings
         System.out.println("\n---- Compare Strings ----");
         System.out.println("Enter two strings to compare:");
         String str1 = input.next();
         String str2 = input.next();
-        if (str1.equals(str2))
+        if (str1.equals(str2))// .equals() checks if the content of the two strings is exactly the same
             System.out.println("Strings are equal.");
         else
             System.out.println("Strings are not equal.");
