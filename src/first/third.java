@@ -1,4 +1,4 @@
-package third;
+package first;
 
 import java.util.Scanner;
 
@@ -79,6 +79,24 @@ public class third {
         System.out.println("Multiplication Table of " + number + ":");
         for (int i = 1; i <= 10; i++) {
             System.out.println(number + " x " + i + " = " + (number * i));
+            //  8: Find Factorial of a Number
+       
+            System.out.println("----- Factorial Calculator -----");
+            System.out.print("Enter a number: ");
+            int num = input.nextInt(); // Take number from user
+
+            long factorial = 1; // Variable to store result
+
+            // Loop from 1 to the entered number
+            int j = 1;
+            while (i <= num) {
+                factorial = factorial * i; // Multiply each number
+                i = i + 1; // Go to next number
+            }
+
+            // Show the result
+            System.out.println("Factorial of " + num + " is: " + factorial);
+
         }
 
    
