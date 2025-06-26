@@ -10,6 +10,7 @@ public class one {
 	        System.out.print("Enter your name: ");
 	        String name = scanner.nextLine();
 	        System.out.println("Hello " + name + " How are you?");
+	        
 //	        Enter number  using user input and display sum , subtract, multiply and division
 
 	        System.out.print("Enter the first number: ");
@@ -34,9 +35,7 @@ public class one {
 	        System.out.println("Sum: " + sum);
 	        System.out.println("Subtraction: " + subtract);
 	        System.out.println("Multiplication: " + multiply);
-	        if (num2 != 0) {
-	            System.out.println("Division: " + division);
-	        }
+	        System.out.println("Division: " + division);
 
 	}
 
