@@ -1,4 +1,4 @@
-package first;
+package practice;
 
 import java.util.Scanner;
 
@@ -55,14 +55,27 @@ public class second {
 
        
 
-        // 5. Vowel or Consonant
-        System.out.println("\n---- Vowel or Consonant ----");
-        System.out.println("Enter an alphabet:");
-        char ch = input.next().toLowerCase().charAt(0);
-        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
-            System.out.println("Vowel");
-        else
-            System.out.println("Consonant");
+        // 5. Vowel or Consonant or special character or number
+            System.out.println("\n---- Character Type Checker ----");
+            System.out.println("Enter a single character:");
+
+            char ch = input.next().charAt(0); // Read first character
+
+            if (Character.isLetter(ch)) {
+                // Convert to lowercase
+                ch = Character.toLowerCase(ch);
+
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    System.out.println("Vowel");
+                } else {
+                    System.out.println("Consonant");
+                }
+            } else if (Character.isDigit(ch)) {//Here Character	is Java built-in class and isDigit(char) isStatic method
+                System.out.println("Number");
+            } else {
+                System.out.println("Special Character");
+            }
+
         
         // 6. Compare two strings
         System.out.println("\n---- Compare Strings ----");
